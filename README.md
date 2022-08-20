@@ -1,4 +1,4 @@
-# This is a template for implementing Authentication using Firebase and Next Auth, written in TypeScript
+# This is a template for implementing Authentication using Prisma and Next Auth, written in TypeScript
 
 This Template already supports Google Auth with refresh tokens and e-mail magic link authentication.
 
