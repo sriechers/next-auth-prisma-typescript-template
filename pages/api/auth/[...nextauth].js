@@ -1,8 +1,9 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import EmailProvider from "next-auth/providers/email";
-import { FirestoreAdapter } from "@next-auth/firebase-adapter";
-import { firebaseConfig } from "../../../auth/firebase";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { prisma } from "../../../database";
+
 import {
   googleProviderConfig,
   emailProviderConfig,
@@ -59,7 +60,7 @@ export default NextAuth({
     GoogleProvider(googleProviderConfig),
     EmailProvider(emailProviderConfig),
   ],
-  adapter: FirestoreAdapter(firebaseConfig),
+  adapter: PrismaAdapter(prisma),
   callbacks: {
     async jwt({ token, user, account }) {
       // Initial sign in

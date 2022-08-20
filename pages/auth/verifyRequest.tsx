@@ -1,4 +1,4 @@
-import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 
 const VerifyRequest: NextPage = () => {
